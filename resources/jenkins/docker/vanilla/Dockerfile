@@ -1,5 +1,5 @@
 FROM ubuntu:swarm
-MAINTAINER Governikus KG <ausweisapp2@governikus.com>
+MAINTAINER Governikus KG <ausweisapp2@governikus.de>
 
 ENV NAME=Vanilla LABELS="Vanilla"
 ENV DEBIAN_FRONTEND noninteractive

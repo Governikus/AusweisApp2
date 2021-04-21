@@ -26,7 +26,7 @@ endif()
 message(STATUS "Using DMG: ${DMG_FILE}")
 
 if(NOT USER)
-	set(USER ausweisapp@governikus.com)
+	set(USER ausweisapp@governikus.de)
 endif()
 
 execute_process(COMMAND ${XCRUN} altool -t osx --notarize-app --verbose -u ${USER} -p @env:PASSWORD --primary-bundle-id com.governikus.ausweisapp2 -f ${DMG_FILE}

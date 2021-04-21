@@ -16,7 +16,7 @@ endif()
 
 function(CONFIGURE_CONFIG_H)
 	if(VENDOR_GOVERNIKUS)
-		set(VENDOR_DOMAIN governikus.com)
+		set(VENDOR_DOMAIN governikus.de)
 	else()
 		set(VENDOR_DOMAIN)
 	endif()

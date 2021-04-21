@@ -257,16 +257,16 @@ class test_StateCheckRefreshAddress
 			QTest::addColumn<QUrl>("redirectUrl");
 			QTest::addColumn<bool>("developerMode");
 
-			QTest::newRow("service unavailable") << QNetworkReply::NetworkError::ServiceUnavailableError << GlobalStatus::Code::Network_ServiceUnavailable << 1 << QUrl("http://governikus.com/") << false;
+			QTest::newRow("service unavailable") << QNetworkReply::NetworkError::ServiceUnavailableError << GlobalStatus::Code::Network_ServiceUnavailable << 1 << QUrl("http://governikus.de/") << false;
 			QTest::newRow("timeout") << QNetworkReply::NetworkError::TimeoutError << GlobalStatus::Code::Network_TimeOut << 2 << QUrl() << false;
 			QTest::newRow("proxy error") << QNetworkReply::NetworkError::ProxyNotFoundError << GlobalStatus::Code::Network_Proxy_Error << 0 << QUrl("test") << false;
-			QTest::newRow("ssl error") << QNetworkReply::NetworkError::SslHandshakeFailedError << GlobalStatus::Code::Network_Ssl_Establishment_Error << 1 << QUrl("https://governikus.com/") << false;
-			QTest::newRow("other error") << QNetworkReply::NetworkError::OperationCanceledError << GlobalStatus::Code::Network_Other_Error << 2 << QUrl("https://governikus.com/") << false;
-			QTest::newRow("no error unexpected status") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::Workflow_Network_Expected_Redirect << 2 << QUrl("https://governikus.com/") << false;
+			QTest::newRow("ssl error") << QNetworkReply::NetworkError::SslHandshakeFailedError << GlobalStatus::Code::Network_Ssl_Establishment_Error << 1 << QUrl("https://governikus.de/") << false;
+			QTest::newRow("other error") << QNetworkReply::NetworkError::OperationCanceledError << GlobalStatus::Code::Network_Other_Error << 2 << QUrl("https://governikus.de/") << false;
+			QTest::newRow("no error unexpected status") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::Workflow_Network_Expected_Redirect << 2 << QUrl("https://governikus.de/") << false;
 			QTest::newRow("no error empty url") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::Workflow_Network_Empty_Redirect_Url << 302 << QUrl() << false;
 			QTest::newRow("no error invalid url") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::Workflow_Network_Malformed_Redirect_Url << 302 << QUrl("://://") << false;
-			QTest::newRow("no error http") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::Workflow_Network_Invalid_Scheme << 302 << QUrl("http://governikus.com/") << false;
-			QTest::newRow("no error http developer mode") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::No_Error << 302 << QUrl("http://governikus.com/") << true;
+			QTest::newRow("no error http") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::Workflow_Network_Invalid_Scheme << 302 << QUrl("http://governikus.de/") << false;
+			QTest::newRow("no error http developer mode") << QNetworkReply::NetworkError::NoError << GlobalStatus::Code::No_Error << 302 << QUrl("http://governikus.de/") << true;
 		}
 
 

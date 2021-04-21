@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-MAINTAINER Governikus KG <ausweisapp2@governikus.com>
+MAINTAINER Governikus KG <ausweisapp2@governikus.de>
 
 ARG JENKINS_SWARM_VERSION=3.24
 ENV EXECUTOR=3 LABELS= NAME= PASSWORD=

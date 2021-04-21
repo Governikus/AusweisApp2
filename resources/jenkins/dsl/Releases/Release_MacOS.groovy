@@ -35,6 +35,6 @@ j.with
 
 		shell('cd build/; cmake -P ../source/cmake/Notarization.cmake')
 
-		shell('cd build/; xcrun altool -t osx --upload-app -u "ausweisapp@governikus.com" -p @env:PASSWORD -f *.pkg')
+		shell('cd build/; xcrun altool -t osx --upload-app -u "ausweisapp@governikus.de" -p @env:PASSWORD -f *.pkg')
 	}
 }

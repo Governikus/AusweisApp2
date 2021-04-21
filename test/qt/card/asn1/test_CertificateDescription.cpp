@@ -213,7 +213,7 @@ class test_CertificateDescription
 												   "Governikus GmbH & Co.KG\r\n"
 												   "Am Fallturm 9\r\n"
 												   "28359 Bremen\r\n"
-												   "kontakt@governikus.com\r\n"
+												   "kontakt@governikus.de\r\n"
 												   "\r\n"
 												   "Gesch\u00E4ftszweck:\r\n"
 												   "Selbstauskunft\r\n"
@@ -239,7 +239,7 @@ class test_CertificateDescription
 			const QString providerAddress("Governikus GmbH & Co.KG\n"
 										  "Am Fallturm 9\n"
 										  "28359 Bremen\n"
-										  "kontakt@governikus.com");
+										  "kontakt@governikus.de");
 
 			auto certDescr = CertificateDescription::fromHex(HEX_STRING);
 			QVERIFY(certDescr);
@@ -248,7 +248,7 @@ class test_CertificateDescription
 			const QString providerAddress2017("Governikus GmbH & Co. KG\n"
 											  "Am Fallturm 9\n"
 											  "28359 Bremen\n"
-											  "kontakt@governikus.com");
+											  "kontakt@governikus.de");
 			certDescr = CertificateDescription::fromHex(SELF_AUTH_CERT_2017);
 			QVERIFY(certDescr);
 			QCOMPARE(certDescr->getServiceProviderAddress(), providerAddress2017);

@@ -1,5 +1,5 @@
 FROM ubuntu:swarm
-MAINTAINER Governikus KG <ausweisapp2@governikus.com>
+MAINTAINER Governikus KG <ausweisapp2@governikus.de>
 
 ARG ANDROID_CMDLINE_TOOLS=6609375
 ARG ANDROID_NDK_VERSION=21.3.6528147

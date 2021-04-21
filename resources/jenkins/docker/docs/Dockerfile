@@ -1,5 +1,5 @@
 FROM alpine:swarm
-MAINTAINER Governikus KG <ausweisapp2@governikus.com>
+MAINTAINER Governikus KG <ausweisapp2@governikus.de>
 
 ENV NAME=Docs LABELS=Docs
 

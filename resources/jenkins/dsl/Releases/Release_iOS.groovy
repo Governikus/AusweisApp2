@@ -47,9 +47,9 @@ j.with
 
 			steps
 			{
-				shell('cd build; xcrun altool -t ios --validate-app --verbose -u "ausweisapp@governikus.com" -p @env:PASSWORD -f *.ipa')
+				shell('cd build; xcrun altool -t ios --validate-app --verbose -u "ausweisapp@governikus.de" -p @env:PASSWORD -f *.ipa')
 
-				shell('cd build; xcrun altool -t ios --upload-app -u "ausweisapp@governikus.com" -p @env:PASSWORD -f *.ipa')
+				shell('cd build; xcrun altool -t ios --upload-app -u "ausweisapp@governikus.de" -p @env:PASSWORD -f *.ipa')
 			}
 		}
 	}
